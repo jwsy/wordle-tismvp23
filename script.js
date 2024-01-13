@@ -2314,6 +2314,9 @@ const targetWords = [
   "artsy",
   "rural",
   "shave",
+  "kaila",
+  "jason",
+  "dotun"
 ]
 const dictionary = [
   "aahed",
@@ -15296,11 +15299,11 @@ const DANCE_ANIMATION_DURATION = 500
 const keyboard = document.querySelector("[data-keyboard]")
 const alertContainer = document.querySelector("[data-alert-container]")
 const guessGrid = document.querySelector("[data-guess-grid]")
-const offsetFromDate = new Date(2022, 0, 1)
+const offsetFromDate = new Date(2024, 0, 1)
 const msOffset = Date.now() - offsetFromDate
 const dayOffset = msOffset / 1000 / 60 / 60 / 24
 // const targetWord = targetWords[Math.floor(dayOffset)]
-const targetWord = "smore"
+const targetWord = "kaila"
 
 startInteraction()
 
@@ -15459,8 +15462,14 @@ function shakeTiles(tiles) {
 
 function checkWinLose(guess, tiles) {
   if (guess === targetWord) {
-    // showAlert("You Win", 5000)
-    showAlert("I'll take two boxes of smores pls 📦", 50000)
+    showAlert("We're going to miss you, Kaila! ♥️🏆", 50000)
+    danceTiles(tiles)
+    stopInteraction()
+    return
+  }
+
+  if (guess === 'jason') {
+    showAlert("No", 5000)
     danceTiles(tiles)
     stopInteraction()
     return
