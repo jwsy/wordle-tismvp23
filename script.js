@@ -13150,7 +13150,7 @@ function shakeTiles(tiles) {
 
 function checkWinLose(guess, tiles) {
   if (guess === targetWord) {
-    showAlert("We're going to miss you, Kaila! ♥️🏆", 50000)
+    showAlert("We're going to miss you, Kaila! 👋🏆", 50000)
     danceTiles(tiles)
     stopInteraction()
     return
@@ -13159,14 +13159,12 @@ function checkWinLose(guess, tiles) {
   if (guess === 'dotun') {
     showAlert("GAP tech MVP 🙌", 5000)
     danceTiles(tiles)
-    stopInteraction()
     return
   }
 
   if (guess === 'jason') {
     showAlert("Make better choices 😅", 5000)
     danceTiles(tiles)
-    stopInteraction()
     return
   }
 
